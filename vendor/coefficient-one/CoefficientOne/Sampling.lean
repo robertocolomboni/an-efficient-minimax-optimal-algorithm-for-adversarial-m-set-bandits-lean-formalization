@@ -1,0 +1,48 @@
+import CoefficientOne.Sampling.Model
+import CoefficientOne.Sampling.FiniteLawMeasure
+import CoefficientOne.Sampling.Reindex
+import CoefficientOne.Sampling.ConditionalGap
+import CoefficientOne.Sampling.Seed
+import CoefficientOne.Sampling.SeedConditioning
+import CoefficientOne.Sampling.StoppedSeed
+import CoefficientOne.Sampling.Sequential
+import CoefficientOne.Sampling.RestrictedElementary
+import CoefficientOne.Sampling.RestrictedLawRecursion
+import CoefficientOne.Sampling.SequentialLaw
+import CoefficientOne.Sampling.HypersimplexFeasibility
+import CoefficientOne.Sampling.MaximumEntropy
+import CoefficientOne.Sampling.ExponentialFamily
+import CoefficientOne.Sampling.UnitCurrentCovariance
+import CoefficientOne.Sampling.VarianceDrop
+import CoefficientOne.Sampling.Coarea
+import CoefficientOne.Sampling.NewtonElementary
+import CoefficientOne.Sampling.QuotaMonotonicity
+import CoefficientOne.Sampling.DiniBound
+import CoefficientOne.Sampling.HypersimplexGeometry
+import CoefficientOne.Sampling.ParametrizationTheorem
+import CoefficientOne.Sampling.AdjacentQuotas
+import CoefficientOne.Sampling.SequentialHistory
+import CoefficientOne.Sampling.ConditionalLaw
+import CoefficientOne.Sampling.Variation
+import CoefficientOne.Sampling.FrozenContinuation
+import CoefficientOne.Sampling.TwoThresholds
+import CoefficientOne.Sampling.AtMostSampler
+import CoefficientOne.Sampling.VariationTheorem
+import CoefficientOne.Sampling.CorrelatedSampling
+import CoefficientOne.Sampling.JointHistoryMeasurability
+import CoefficientOne.Sampling.ThresholdRegularity
+import CoefficientOne.Sampling.QuadraticError
+import CoefficientOne.Sampling.OneSidedCoupling
+import CoefficientOne.Sampling.UnitCurrentSideClaims
+import CoefficientOne.Sampling.VariationSideClaims
+import CoefficientOne.Sampling.InteriorLocalCoupling
+import CoefficientOne.Sampling.FirstDisagreementConditional
+
+/-!
+# Appendix E.2: integrated modules
+
+This entry point includes the concrete shared-seed sampler, all six supporting
+lemmas, the radial boundary completion, and the dummy-coordinate construction.
+The unconditional endpoints are `Sampling.exact_correlated_sampling` and
+`Sampling.atMost_correlated_sampling` in `Sampling.CorrelatedSampling`.
+-/

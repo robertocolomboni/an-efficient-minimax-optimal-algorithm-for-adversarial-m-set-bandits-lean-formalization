@@ -1,0 +1,99 @@
+import MsetsLower.Prelude
+import MsetsLower.Core.Protocol
+import MsetsLower.Core.HistoryStats
+import MsetsLower.Core.HistoryPrefix
+import MsetsLower.Core.ParametricRun
+import MsetsLower.Feedback.Map
+import MsetsLower.Feedback.Inverse
+import MsetsLower.Feedback.Pushforward
+import MsetsLower.Feedback.MeasureKL
+import MsetsLower.Feedback.Score
+import MsetsLower.Feedback.Hessian
+import MsetsLower.Feedback.Moments
+import MsetsLower.Information.SequentialKL
+import MsetsLower.Probability.FixingTable
+import MsetsLower.Probability.KernelFixing
+import MsetsLower.Probability.Selection
+import MsetsLower.Probability.MeanToTail
+import MsetsLower.Probability.ChangedLawMaximum
+import MsetsLower.Probability.ProbabilityComparison
+import MsetsLower.Probability.FiniteEventAverage
+import MsetsLower.Lower.Complement
+import MsetsLower.Lower.Parameters
+import MsetsLower.Lower.RegretMeasurability
+import MsetsLower.Lower.ParametricRegret
+import MsetsLower.Lower.TruncatedRegret
+import MsetsLower.Lower.Confidence.Core
+import MsetsLower.Lower.Confidence.Arithmetic
+import MsetsLower.Lower.Confidence.Construction
+import MsetsLower.Lower.Confidence.Adaptive
+import MsetsLower.Lower.Confidence.Score
+import MsetsLower.Lower.Confidence.AverageScore
+import MsetsLower.Lower.Confidence.EventAverage
+import MsetsLower.Lower.Confidence.GoodEvent
+import MsetsLower.Lower.Confidence.Stopping
+import MsetsLower.Lower.Confidence.Selection
+import MsetsLower.Lower.Confidence.KLArithmetic
+import MsetsLower.Lower.Sparse.Parameters
+import MsetsLower.Lower.Sparse.Construction
+import MsetsLower.Lower.Sparse.Scores
+import MsetsLower.Lower.Sparse.FeedbackBridge
+import MsetsLower.Lower.Sparse.Table
+import MsetsLower.Lower.Sparse.Fixing
+import MsetsLower.Lower.Sparse.GoodPartition
+import MsetsLower.Lower.Sparse.Likelihood
+import MsetsLower.Lower.Sparse.JointLikelihood
+import MsetsLower.Lower.Sparse.TableChange
+import MsetsLower.Lower.Sparse.ScoreBridge
+import MsetsLower.Lower.Sparse.ScoreBias
+import MsetsLower.Lower.Sparse.ScoreBiasExpectation
+import MsetsLower.Lower.Sparse.ScoreBiasFullTable
+import MsetsLower.Lower.Sparse.PositiveDrift
+import MsetsLower.Lower.Sparse.PositiveDriftExpectation
+import MsetsLower.Lower.Sparse.ConcreteDiagonal
+import MsetsLower.Lower.Sparse.ConcreteLikelihood
+import MsetsLower.Lower.Sparse.MixtureTV
+import MsetsLower.Lower.Sparse.MixtureArithmetic
+import MsetsLower.Lower.Sparse.ConcreteMixture
+import MsetsLower.Lower.Sparse.Gamma
+import MsetsLower.Lower.Sparse.GammaMean
+import MsetsLower.Lower.Sparse.ConcreteDrift
+import MsetsLower.Lower.Sparse.EventFixing
+import MsetsLower.Lower.Sparse.ExtendedFixing
+import MsetsLower.Lower.Sparse.GammaTail
+import MsetsLower.Lower.Sparse.ConcreteMean
+import MsetsLower.Lower.Sparse.FinalAction
+import MsetsLower.Lower.Sparse.FinalArithmetic
+import MsetsLower.Lower.Sparse.FinalProbability
+import MsetsLower.Lower.Sparse.Truncation
+import MsetsLower.Lower.Dense.PairedConstruction
+import MsetsLower.Lower.Dense.OneStepKL
+import MsetsLower.Lower.Dense.AdaptiveLaw
+import MsetsLower.Lower.Dense.Assouad
+import MsetsLower.Lower.Dense.Moment
+import MsetsLower.Lower.Dense.Bridge
+import MsetsLower.Lower.Dense.Table
+import MsetsLower.Lower.Dense.Fixing
+import MsetsLower.Lower.Confidence.KLProcess
+import MsetsLower.Lower.Confidence.ObservableScore
+import MsetsLower.Lower.Confidence.ReferenceConcentration
+import MsetsLower.Lower.Confidence.ReferenceGoodEvent
+import MsetsLower.Lower.Confidence.ReferenceSelection
+import MsetsLower.Lower.Confidence.Table
+import MsetsLower.Lower.Confidence.Fixing
+import MsetsLower.Lower.ThresholdArithmetic
+import MsetsLower.Lower.FinalArithmetic
+import MsetsLower.Lower.Statement
+import MsetsLower.Lower.OrdinaryBandit
+import MsetsLower.Lower.Qualitative
+import MsetsLower.Lower.ActionCount
+import MsetsLower.Lower.MainAssembly
+
+/-!
+# Formalization of the high-probability lower bound for m-set bandits
+
+This is the root module of the certification project.  A paper result is not
+considered covered merely because its label occurs in an audit file: every
+mathematical clause must be linked to a compiled Lean declaration and have its
+foundational dependencies printed explicitly.
+-/
