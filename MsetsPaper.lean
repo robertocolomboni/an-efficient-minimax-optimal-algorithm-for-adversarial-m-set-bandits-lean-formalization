@@ -83,6 +83,6 @@ import MsetsPaper.Alignment.ReleaseIntroduction
 import MsetsPaper.Alignment.UpperDeterministicHistory
 
 /-!
-Entry point for the formalization accompanying paper/main.tex.
+Entry point for the formalization accompanying paper/main.pdf.
 See RESULTS.md for the correspondence with the manuscript.
 -/
